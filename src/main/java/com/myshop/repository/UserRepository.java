@@ -1,4 +1,8 @@
 package com.myshop.repository;
+import com.myshop.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class UserRepository {
+import java.util.Optional;
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByUsername(String username);
 }

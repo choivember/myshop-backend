@@ -1,4 +1,7 @@
 package com.myshop.repository;
 
-public class ProductRepository {
+import com.myshop.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }
